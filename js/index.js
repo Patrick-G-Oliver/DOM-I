@@ -46,3 +46,21 @@ roundImg.src = 'img/header-img.png';
 
 let midImg = document.querySelector('#middle-img');
 midImg.setAttribute('src', 'img/mid-page-accent.jpg');
+
+const navItem1 = document.querySelectorAll('a');
+navItem1[0].textContent = "Services";
+
+const navItem2 = document.querySelectorAll('a');
+navItem2[1].textContent = "Product";
+
+const navItem3 = document.querySelectorAll('a');
+navItem3[2].textContent = "Vision";
+
+const navItem4 = document.querySelectorAll('a');
+navItem4[3].textContent = "Features";
+
+const navItem5 = document.querySelectorAll('a');
+navItem5[4].textContent = "About";
+
+const navItem6 = document.querySelectorAll('a');
+navItem6[5].textContent = "Contact";
