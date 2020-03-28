@@ -49,21 +49,27 @@ midImg.setAttribute('src', 'img/mid-page-accent.jpg');
 
 const navItem1 = document.querySelectorAll('a');
 navItem1[0].textContent = "Services";
+navItem1[0].style.color = 'green';
 
 const navItem2 = document.querySelectorAll('a');
 navItem2[1].textContent = "Product";
+navItem1[1].style.color = 'green';
 
 const navItem3 = document.querySelectorAll('a');
 navItem3[2].textContent = "Vision";
+navItem1[2].style.color = 'green';
 
 const navItem4 = document.querySelectorAll('a');
 navItem4[3].textContent = "Features";
+navItem1[3].style.color = 'green';
 
 const navItem5 = document.querySelectorAll('a');
 navItem5[4].textContent = "About";
+navItem1[4].style.color = 'green';
 
 const navItem6 = document.querySelectorAll('a');
 navItem6[5].textContent = "Contact";
+navItem1[5].style.color = 'green';
 
 const headline = document.querySelector('h1');
 headline.textContent = "Dom Is Awesome";
