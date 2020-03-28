@@ -37,6 +37,7 @@ const siteContent = {
   },
 };
 
+/////////////images////////////////////////////
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -47,6 +48,23 @@ roundImg.src = 'img/header-img.png';
 let midImg = document.querySelector('#middle-img');
 midImg.setAttribute('src', 'img/mid-page-accent.jpg');
 
+////////nav prepend & append////////////////
+let navPrepend = document.createElement('h2');
+navPrepend.textContent = 'pre';
+navPrepend.style.color = 'green';
+
+let navAppend = document.createElement('h2');
+navAppend.textContent = 'post';
+navAppend.style.color = 'green';
+
+let navBar = document.querySelector('nav');
+
+navBar.prepend(navPrepend);
+
+navBar.appendChild(navAppend);
+//////////////////////////////////////////////
+
+//////////nav bar ///////////////////////////
 const navItem1 = document.querySelectorAll('a');
 navItem1[0].textContent = "Services";
 navItem1[0].style.color = 'green';
@@ -70,7 +88,9 @@ navItem1[4].style.color = 'green';
 const navItem6 = document.querySelectorAll('a');
 navItem6[5].textContent = "Contact";
 navItem1[5].style.color = 'green';
+//////////////////////////////////////////////////
 
+////////////main content h4s & ps ///////////////
 const headline = document.querySelector('h1');
 headline.textContent = "Dom Is Awesome";
 
@@ -106,7 +126,9 @@ vision[4].textContent = 'Vision';
 
 const visionP = document.querySelectorAll('p');
 visionP[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+/////////////////////////////////////////////////
 
+/////////////// contact section & footer ////////
 const contact = document.querySelectorAll('h4');
 contact[5].textContent = 'Contact';
 
