@@ -64,3 +64,62 @@ navItem5[4].textContent = "About";
 
 const navItem6 = document.querySelectorAll('a');
 navItem6[5].textContent = "Contact";
+
+const headline = document.querySelector('h1');
+headline.textContent = "Dom Is Awesome";
+
+const startButton = document.querySelector('button');
+startButton.textContent = "Get Started";
+
+const features = document.querySelectorAll('h4');
+features[0].textContent = 'Features';
+
+const featuresP = document.querySelectorAll('p');
+featuresP[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+const about = document.querySelectorAll('h4');
+about[1].textContent = 'About';
+
+const aboutP = document.querySelectorAll('p');
+aboutP[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+const services = document.querySelectorAll('h4');
+services[2].textContent = 'Services';
+
+const servicesP = document.querySelectorAll('p');
+servicesP[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+const product = document.querySelectorAll('h4');
+product[3].textContent = 'Product';
+
+const productP = document.querySelectorAll('p');
+productP[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+const vision = document.querySelectorAll('h4');
+vision[4].textContent = 'Vision';
+
+const visionP = document.querySelectorAll('p');
+visionP[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+const contact = document.querySelectorAll('h4');
+contact[5].textContent = 'Contact';
+
+const addressP = document.querySelectorAll('p');
+addressP[5].textContent = '123 Way 456 Street Somewhere, USA';
+
+const phoneNumberP = document.querySelectorAll('p');
+phoneNumberP[6].textContent = '1 (888) 888-8888';
+
+const emailP = document.querySelectorAll('p');
+emailP[7].textContent = 'sales@greatidea.io';
+
+const copyrightP = document.querySelectorAll('p');
+copyrightP[8].textContent = 'Copyright Great Idea! 2018';
+
+
+
+
+
+
+
+
