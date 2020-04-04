@@ -42,11 +42,17 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let roundImg = document.querySelector('#cta-img');
-roundImg.src = 'img/header-img.png';
+let roundImg = document.getElementById('cta-img');
+roundImg.src = siteContent['cta']['img-src'];
+// or, with querySelector and dot notation:
+//let roundImg = document.querySelector('#cta-img');
+//roundImg.src = 'img/header-img.png';
 
-let midImg = document.querySelector('#middle-img');
-midImg.setAttribute('src', 'img/mid-page-accent.jpg');
+let midImg = document.getElementById('middle-img');
+midImg.src = siteContent['main-content']['middle-img-src'];
+// or,with querySelector and dot.notation:
+//let midImg = document.querySelector('#middle-img');
+//midImg.setAttribute('src', 'img/mid-page-accent.jpg');
 
 ////////nav prepend & append////////////////
 let navPrepend = document.createElement('h2');
@@ -65,84 +71,77 @@ navBar.appendChild(navAppend);
 //////////////////////////////////////////////
 
 //////////nav bar ///////////////////////////
-const navItem1 = document.querySelectorAll('a');
-navItem1[0].textContent = "Services";
-navItem1[0].style.color = 'green';
+const navItems = document.querySelectorAll('a');
 
-const navItem2 = document.querySelectorAll('a');
-navItem2[1].textContent = "Product";
-navItem1[1].style.color = 'green';
+navItems[0].textContent = siteContent['nav']['nav-item-1'];
+navItems[0].style.color = 'green';
 
-const navItem3 = document.querySelectorAll('a');
-navItem3[2].textContent = "Vision";
-navItem1[2].style.color = 'green';
+navItems[1].textContent = siteContent['nav']['nav-item-2'];
+navItems[1].style.color = 'green';
 
-const navItem4 = document.querySelectorAll('a');
-navItem4[3].textContent = "Features";
-navItem1[3].style.color = 'green';
+navItems[2].textContent = siteContent['nav']['nav-item-3'];
+navItems[2].style.color = 'green';
 
-const navItem5 = document.querySelectorAll('a');
-navItem5[4].textContent = "About";
-navItem1[4].style.color = 'green';
+navItems[3].textContent = siteContent['nav']['nav-item-4'];
+navItems[3].style.color = 'green';
 
-const navItem6 = document.querySelectorAll('a');
-navItem6[5].textContent = "Contact";
-navItem1[5].style.color = 'green';
+navItems[4].textContent = siteContent['nav']['nav-item-5'];
+navItems[4].style.color = 'green';
+
+navItems[5].textContent = siteContent['nav']['nav-item-6'];
+navItems[5].style.color = 'green';
+
+
+//////////////////////////////////////////////////
+
+//////////// cta section /////////////////////////
+
+const headline = document.querySelector('h1');
+headline.textContent = siteContent['cta']['h1'];
+
+const startButton = document.querySelector('button');
+startButton.textContent = siteContent['cta']['button'];
 //////////////////////////////////////////////////
 
 ////////////main content h4s & ps ///////////////
-const headline = document.querySelector('h1');
-headline.textContent = "Dom Is Awesome";
+const h4Tags = document.querySelectorAll('h4');
 
-const startButton = document.querySelector('button');
-startButton.textContent = "Get Started";
+h4Tags[0].textContent = siteContent['main-content']['features-h4'];
 
-const features = document.querySelectorAll('h4');
-features[0].textContent = 'Features';
+h4Tags[1].textContent = siteContent['main-content']['about-h4'];
 
-const featuresP = document.querySelectorAll('p');
-featuresP[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+h4Tags[2].textContent = siteContent['main-content']['services-h4'];
 
-const about = document.querySelectorAll('h4');
-about[1].textContent = 'About';
+h4Tags[3].textContent = siteContent['main-content']['product-h4'];
 
-const aboutP = document.querySelectorAll('p');
-aboutP[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+h4Tags[4].textContent = siteContent['main-content']['vision-h4'];
 
-const services = document.querySelectorAll('h4');
-services[2].textContent = 'Services';
+const pTags = document.querySelectorAll('p');
 
-const servicesP = document.querySelectorAll('p');
-servicesP[2].textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+pTags[0].textContent = siteContent['main-content']['features-content'];
 
-const product = document.querySelectorAll('h4');
-product[3].textContent = 'Product';
+pTags[1].textContent = siteContent['main-content']['about-content'];
 
-const productP = document.querySelectorAll('p');
-productP[3].textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+pTags[2].textContent = siteContent['main-content']['services-content'];
 
-const vision = document.querySelectorAll('h4');
-vision[4].textContent = 'Vision';
+pTags[3].textContent = siteContent['main-content']['product-content'];
 
-const visionP = document.querySelectorAll('p');
-visionP[4].textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+pTags[4].textContent = siteContent['main-content']['vision-content'];
+
 /////////////////////////////////////////////////
 
-/////////////// contact section & footer ////////
-const contact = document.querySelectorAll('h4');
-contact[5].textContent = 'Contact';
+/////////////// contact section ////////////////
+h4Tags[5].textContent = siteContent['contact']['contact-h4'];
 
-const addressP = document.querySelectorAll('p');
-addressP[5].textContent = '123 Way 456 Street Somewhere, USA';
+pTags[5].textContent = siteContent['contact']['address'];
 
-const phoneNumberP = document.querySelectorAll('p');
-phoneNumberP[6].textContent = '1 (888) 888-8888';
+pTags[6].textContent = siteContent['contact']['phone'];
 
-const emailP = document.querySelectorAll('p');
-emailP[7].textContent = 'sales@greatidea.io';
+pTags[7].textContent = siteContent['contact']['email'];
 
-const copyrightP = document.querySelectorAll('p');
-copyrightP[8].textContent = 'Copyright Great Idea! 2018';
+/////////////// footer /////////////////////////
+pTags[8].textContent = siteContent['footer']['copyright'];
+
 
 
 
