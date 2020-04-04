@@ -50,11 +50,13 @@ roundImg.src = siteContent['cta']['img-src'];
 
 let midImg = document.getElementById('middle-img');
 midImg.src = siteContent['main-content']['middle-img-src'];
-// or,with querySelector and dot.notation:
+// or,with querySelector and .setAtrribute():
 //let midImg = document.querySelector('#middle-img');
 //midImg.setAttribute('src', 'img/mid-page-accent.jpg');
+////////////////////////////////////////////////
 
-////////nav prepend & append////////////////
+
+////////nav prepend & append///////////////////
 let navPrepend = document.createElement('h2');
 navPrepend.textContent = 'pre';
 navPrepend.style.color = 'green';
@@ -69,6 +71,7 @@ navBar.prepend(navPrepend);
 
 navBar.appendChild(navAppend);
 //////////////////////////////////////////////
+
 
 //////////nav bar ///////////////////////////
 const navItems = document.querySelectorAll('a');
@@ -90,12 +93,10 @@ navItems[4].style.color = 'green';
 
 navItems[5].textContent = siteContent['nav']['nav-item-6'];
 navItems[5].style.color = 'green';
-
-
 //////////////////////////////////////////////////
 
-//////////// cta section /////////////////////////
 
+//////////// cta section /////////////////////////
 const headline = document.querySelector('h1');
 headline.textContent = siteContent['cta']['h1'];
 
@@ -103,45 +104,38 @@ const startButton = document.querySelector('button');
 startButton.textContent = siteContent['cta']['button'];
 //////////////////////////////////////////////////
 
+
 ////////////main content h4s & ps ///////////////
 const h4Tags = document.querySelectorAll('h4');
 
 h4Tags[0].textContent = siteContent['main-content']['features-h4'];
-
 h4Tags[1].textContent = siteContent['main-content']['about-h4'];
-
 h4Tags[2].textContent = siteContent['main-content']['services-h4'];
-
 h4Tags[3].textContent = siteContent['main-content']['product-h4'];
-
 h4Tags[4].textContent = siteContent['main-content']['vision-h4'];
 
 const pTags = document.querySelectorAll('p');
 
 pTags[0].textContent = siteContent['main-content']['features-content'];
-
 pTags[1].textContent = siteContent['main-content']['about-content'];
-
 pTags[2].textContent = siteContent['main-content']['services-content'];
-
 pTags[3].textContent = siteContent['main-content']['product-content'];
-
 pTags[4].textContent = siteContent['main-content']['vision-content'];
-
 /////////////////////////////////////////////////
+
 
 /////////////// contact section ////////////////
 h4Tags[5].textContent = siteContent['contact']['contact-h4'];
 
 pTags[5].textContent = siteContent['contact']['address'];
-
 pTags[6].textContent = siteContent['contact']['phone'];
-
 pTags[7].textContent = siteContent['contact']['email'];
+////////////////////////////////////////////////
+
 
 /////////////// footer /////////////////////////
 pTags[8].textContent = siteContent['footer']['copyright'];
-
+////////////////////////////////////////////////
 
 
 
