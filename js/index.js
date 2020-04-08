@@ -98,7 +98,8 @@ navItems[5].style.color = 'green';
 
 //////////// cta section /////////////////////////
 const headline = document.querySelector('h1');
-headline.textContent = siteContent['cta']['h1'];
+headline.innerHTML = "DOM <br> Is <br> Awesome";
+//headline.textContent = siteContent['cta']['h1'];
 
 const startButton = document.querySelector('button');
 startButton.textContent = siteContent['cta']['button'];
@@ -127,7 +128,8 @@ pTags[4].textContent = siteContent['main-content']['vision-content'];
 /////////////// contact section ////////////////
 h4Tags[5].textContent = siteContent['contact']['contact-h4'];
 
-pTags[5].textContent = siteContent['contact']['address'];
+pTags[5].innerHTML = "123 Way 456 Street <br> Somewhere, USA";
+//pTags[5].textContent = siteContent['contact']['address'];
 pTags[6].textContent = siteContent['contact']['phone'];
 pTags[7].textContent = siteContent['contact']['email'];
 ////////////////////////////////////////////////
