@@ -37,6 +37,132 @@ const siteContent = {
   },
 };
 
+/////////////images////////////////////////////
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let roundImg = document.getElementById('cta-img');
+roundImg.src = siteContent['cta']['img-src'];
+// or, with querySelector and dot notation:
+//let roundImg = document.querySelector('#cta-img');
+//roundImg.src = 'img/header-img.png';
+
+let midImg = document.getElementById('middle-img');
+midImg.src = siteContent['main-content']['middle-img-src'];
+// or,with querySelector and .setAtrribute():
+//let midImg = document.querySelector('#middle-img');
+//midImg.setAttribute('src', 'img/mid-page-accent.jpg');
+////////////////////////////////////////////////
+
+
+////////nav prepend & append///////////////////
+let navPrepend = document.createElement('h2');
+navPrepend.textContent = 'pre';
+navPrepend.style.color = 'green';
+
+let navAppend = document.createElement('h2');
+navAppend.textContent = 'post';
+navAppend.style.color = 'green';
+
+let navBar = document.querySelector('nav');
+
+navBar.prepend(navPrepend);
+
+navBar.appendChild(navAppend);
+//////////////////////////////////////////////
+
+
+//////////nav bar ///////////////////////////
+const navItems = document.querySelectorAll('a');
+
+navItems[0].textContent = siteContent['nav']['nav-item-1'];
+navItems[0].style.color = 'green';
+
+navItems[1].textContent = siteContent['nav']['nav-item-2'];
+navItems[1].style.color = 'green';
+
+navItems[2].textContent = siteContent['nav']['nav-item-3'];
+navItems[2].style.color = 'green';
+
+navItems[3].textContent = siteContent['nav']['nav-item-4'];
+navItems[3].style.color = 'green';
+
+navItems[4].textContent = siteContent['nav']['nav-item-5'];
+navItems[4].style.color = 'green';
+
+navItems[5].textContent = siteContent['nav']['nav-item-6'];
+navItems[5].style.color = 'green'; 
+
+/* 
+/////// from Slack help channel suggestions (autor: Milo Samec)
+const nav = document.getElementsByTagName('nav')[0];
+
+const navItems = nav.getElementsByTagName('a');
+
+for (let i = 0; i < navItems.length(); i++) {
+  navItems[i] = siteContent['nav']['nav-item-'+(i+1)];
+}
+*/
+
+/* 
+/////// from Slack help channel suggestions (autor: Adam Osburn)
+const anchors = Array.from(document.querySelector('nav').children);
+const keyContent = Object.values(siteContent.nav);
+anchors.forEach(a => a.textContent = keyContent.shift());
+anchors.forEach(a => a.style.color = 'green');
+*/
+
+//////////////////////////////////////////////////
+
+
+//////////// cta section /////////////////////////
+const headline = document.querySelector('h1');
+headline.innerHTML = "DOM <br> Is <br> Awesome";
+//headline.textContent = siteContent['cta']['h1'];
+
+const startButton = document.querySelector('button');
+startButton.textContent = siteContent['cta']['button'];
+//////////////////////////////////////////////////
+
+
+////////////main content h4s & ps ///////////////
+const h4Tags = document.querySelectorAll('h4');
+
+h4Tags[0].textContent = siteContent['main-content']['features-h4'];
+h4Tags[1].textContent = siteContent['main-content']['about-h4'];
+h4Tags[2].textContent = siteContent['main-content']['services-h4'];
+h4Tags[3].textContent = siteContent['main-content']['product-h4'];
+h4Tags[4].textContent = siteContent['main-content']['vision-h4'];
+
+const pTags = document.querySelectorAll('p');
+
+pTags[0].textContent = siteContent['main-content']['features-content'];
+pTags[1].textContent = siteContent['main-content']['about-content'];
+pTags[2].textContent = siteContent['main-content']['services-content'];
+pTags[3].textContent = siteContent['main-content']['product-content'];
+pTags[4].textContent = siteContent['main-content']['vision-content'];
+/////////////////////////////////////////////////
+
+
+/////////////// contact section ////////////////
+h4Tags[5].textContent = siteContent['contact']['contact-h4'];
+
+pTags[5].innerHTML = "123 Way 456 Street <br> Somewhere, USA";
+//pTags[5].textContent = siteContent['contact']['address'];
+pTags[6].textContent = siteContent['contact']['phone'];
+pTags[7].textContent = siteContent['contact']['email'];
+////////////////////////////////////////////////
+
+
+/////////////// footer /////////////////////////
+pTags[8].textContent = siteContent['footer']['copyright'];
+////////////////////////////////////////////////
+
+
+
+
+
+
+
+
