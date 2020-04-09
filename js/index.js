@@ -92,7 +92,27 @@ navItems[4].textContent = siteContent['nav']['nav-item-5'];
 navItems[4].style.color = 'green';
 
 navItems[5].textContent = siteContent['nav']['nav-item-6'];
-navItems[5].style.color = 'green';
+navItems[5].style.color = 'green'; 
+
+/* 
+/////// from Slack help channel suggestions (autor: Milo Samec)
+const nav = document.getElementsByTagName('nav')[0];
+
+const navItems = nav.getElementsByTagName('a');
+
+for (let i = 0; i < navItems.length(); i++) {
+  navItems[i] = siteContent['nav']['nav-item-'+(i+1)];
+}
+*/
+
+/* 
+/////// from Slack help channel suggestions (autor: Adam Osburn)
+const anchors = Array.from(document.querySelector('nav').children);
+const keyContent = Object.values(siteContent.nav);
+anchors.forEach(a => a.textContent = keyContent.shift());
+anchors.forEach(a => a.style.color = 'green');
+*/
+
 //////////////////////////////////////////////////
 
 
