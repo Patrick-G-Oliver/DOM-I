@@ -72,8 +72,27 @@ navBar.prepend(navPrepend);
 navBar.appendChild(navAppend);
 //////////////////////////////////////////////
 
+//////// nav bar ////////////////////////////
+let menuItems = document.querySelectorAll('a');
 
-//////////nav bar ///////////////////////////
+menuItems.forEach( (nav) => {
+  menuItems[0].textContent = "Services";
+  menuItems[1].textContent = "Product";
+  menuItems[2].textContent = "Vision";
+  menuItems[3].textContent = "Features";
+  menuItems[4].textContent = "About";
+  menuItems[5].textContent = "Contact";
+});
+
+const nav = Array.from(document.querySelectorAll('nav a'));
+for (let i = 0; i < nav.length; i++) {
+  const navItem = `nav-item-${i+1}`
+  nav[i].style.color = 'green';
+}
+/////////////////////////////////////////////
+
+/*
+//////////nav bar (initial attempt) ///////////////////////////
 const navItems = document.querySelectorAll('a');
 
 navItems[0].textContent = siteContent['nav']['nav-item-1'];
@@ -93,16 +112,18 @@ navItems[4].style.color = 'green';
 
 navItems[5].textContent = siteContent['nav']['nav-item-6'];
 navItems[5].style.color = 'green'; 
+*/
 
-/* 
+/*
 /////// from Slack help channel suggestions (autor: Milo Samec)
-const nav = document.getElementsByTagName('nav')[0];
+let nav = document.getElementsByTagName('nav')[0];
 
-const navItems = nav.getElementsByTagName('a');
+let navItems = nav.getElementsByTagName('a');
 
-for (let i = 0; i < navItems.length(); i++) {
+for (let i = 0; i < navItems.length; i++) {
   navItems[i] = siteContent['nav']['nav-item-'+(i+1)];
-}
+  navItems[i].style.color = green;
+};
 */
 
 /* 
@@ -112,7 +133,6 @@ const keyContent = Object.values(siteContent.nav);
 anchors.forEach(a => a.textContent = keyContent.shift());
 anchors.forEach(a => a.style.color = 'green');
 */
-
 //////////////////////////////////////////////////
 
 
